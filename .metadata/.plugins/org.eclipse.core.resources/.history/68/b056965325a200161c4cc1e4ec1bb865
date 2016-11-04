@@ -1,0 +1,63 @@
+package com.example.threecache.utils;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Bitmap.CompressFormat;
+
+/**
+ * 鏈湴缂撳瓨
+ * 
+ * @author h
+ * 
+ */
+public class LocalCacheUtils {
+	private String CACHE_DIR;// 鏈湴缂撳瓨鐩綍
+	private MemoryCacheUtils memoryCacheUtils;
+
+	public LocalCacheUtils(MemoryCacheUtils memoryCacheUtils) {
+		CACHE_DIR = "/sdcard/zhbj71";
+		this.memoryCacheUtils = memoryCacheUtils;
+	}
+
+	// 瀵瑰鎻愪緵浠庢湰鍦拌幏鍙栧浘鐗囩殑鏂规硶
+	public Bitmap getBitmap(String url) {
+		Bitmap bitmap = null;
+		try {
+			// 鎶妘rl鍋歮d5鍔犲瘑锛屼綔涓烘枃浠跺悕
+			String fileName;
+			fileName = MD5Encoder.encode(url);
+			File file = new File(CACHE_DIR, fileName);
+			if (file.exists()) {
+				bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+				// 寰�鍐呭瓨涓瓨涓�浠�
+				memoryCacheUtils.putBitmap(url, bitmap);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bitmap;
+	}
+
+	// 瀵瑰鎻愪緵寰�鏈湴瀛樺浘鐗囩殑鏂规硶
+	public void putBitmap(String url, Bitmap bitmap) {
+		try {
+			// 鎶妘rl鍋歮d5鍔犲瘑锛屼綔涓烘枃浠跺悕
+			String fileName = MD5Encoder.encode(url);
+			File file = new File(CACHE_DIR, fileName);// /sdcard/adsfas/zhbj71/jk;ljsljl
+			File parentFile = file.getParentFile();
+			if(!parentFile.exists()){// 鍒ゆ柇涓婄骇鐩綍鏄惁瀛樺湪锛屼笉瀛樺湪灏遍渶瑕佸垱寤�
+				parentFile.mkdirs();
+			}
+			// 鎶夿itmap瀵硅薄鎸佷箙鍖栧埌鏈湴
+			OutputStream os = new FileOutputStream(file);
+			bitmap.compress(CompressFormat.JPEG, 100, os);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

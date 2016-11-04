@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_38"
+            android:orientation="horizontal" >
+            <TextView 
+                android:id="@+id/tv_insuranceflag"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/px2dp_96"
+                android:layout_height="@dimen/px2dp_40"
+                android:background="@drawable/insure_bg_gray"
+                android:text="@string/default_value"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_24"
+                />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/px2dp_6"
+                android:id="@+id/tv_insurancename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_value"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2sp_32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_34"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/default_value"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_40" />
+
+            <TextView
+                android:id="@+id/tv_center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/px2dp_10"
+                android:paddingRight="@dimen/px2dp_10"
+                android:singleLine="true"
+                android:text="@string/default_value"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_40"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="@dimen/px2dp_20"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/default_numerical"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_40" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_14"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="适用人群"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_26" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="保障期限"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_26"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="@dimen/px2dp_20"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="参考保费"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_26" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_38"
+            android:layout_marginTop="@dimen/px2sp_32"
+            android:singleLine="true"
+            android:text="第2年起每年3%固定复利累积，现金价值灵活领取"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_26" />
+    </LinearLayout>
+
+</LinearLayout>

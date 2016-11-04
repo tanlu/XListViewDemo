@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.title{ text-align:center; font-size:20px; padding:10px 0; border-bottom:1px solid #dedede; font-weight:bold}
+p{ line-height:25px; font-size:14px; padding:10px 0; text-indent:2em}\
+h4{ padding:5px 0}
+h5{ line-height:27px; padding:5px 0}
+.ts{ color:#000; line-height:25px; text-indent:2em}
+@media screen and (max-width: 400px) {
+.title{ text-align:center; font-size:16px; padding:10px 0; border-bottom:1px solid #dedede; font-weight:bold}
+p{ line-height:25px; font-size:12px; padding:10px 0; text-indent:2em}
+h4{ padding:5px 0; font-size:16px}
+h5{ font-size:14px;}
+.ts{ color:#000; line-height:25px; text-indent:2em}
+}

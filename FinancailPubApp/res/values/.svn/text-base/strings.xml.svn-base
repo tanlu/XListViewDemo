@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">米多财富管理</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="default_value">--</string>
+    <string name="default_numerical">0</string>
+    <string name="default_amount">0.00</string>
+
+    <string name="http_exception_error">连接服务器失败，请稍后再试</string>
+    <string name="socket_exception_error">连接服务器失败，请稍后再试</string>
+    <string name="network_not_connected">当前网络不可用，请检查</string>
+    <string name="json_parser_failed">数据解析异常</string>
+    <string name="io_exception_error">文件流异常</string>
+    <string name="app_run_code_error">应用程序运行时异常</string>
+    <string name="http_status_code_error">网络异常，错误码：%d</string>
+    
+    <string name="set_gest">设置手势密码</string>
+    <string name="draw_gest">绘制解锁图案</string>
+    <string name="input_gest">请输入手势密码</string>
+    <string name="jump">跳过</string>
+    
+    <string name="yestday">昨日收益</string>
+    <string name="failurecause">常见的失败原因：\n1.身份证、姓名或银行预留手机号有误\n2.支付金额超过银行卡单笔支付限额
+        
+        \n3.超过银行卡单日/月累计支付限额/次数\n4.该银行卡可用余额不足\n5.银行卡未开通快捷支付业务</string>
+        
+    <string name="gainValidate">获取验证码</string>
+    <string name="sendValidate">重新发送</string>
+    <string name="select_planner_tips1">\u3000\u3000每一位米多理财顾问都具有多年理财服务经验，并且经过米多财富严格甄选、培训和考试。</string>
+    <string name="select_planner_tips2">\u3000\u3000您可以根据需要申请更换理财顾问。</string>
+    <string name="select_planner_tips3">真的财富管理必须兼顾安全与收益</string>
+    <string name="gesture_str1">请设置手势密码以保护您的隐私信息</string>
+    <string name="gesture_str2">请再次绘制手势密码进行确认</string>
+    <string name="gesture_str3">恭喜!您已开户成功！</string>
+    <string name="replaceplanner_tip">您需要等待7天才能再次申请更换理财顾问。</string>
+    <string name="success_noplace">\u3000\u3000亲爱的用户，由于您支付超时，在此期间产品额度被抢光啦：(\n\u3000\u3000您的实际支付金额将退还至您的支付银行账号！</string>
+    <string name="transfer_noplace">\u3000\u3000亲爱的用户，由于您支付超时，在此期间本转让单被别人抢先付款啦：(\n\u3000\u3000您的实际支付金额将退还至您的支付银行账号！</string>
+    <string name="orderfailed_1">一大波客户正在哄抢此产品，您指定的订单金额超过了产品剩余额度，请重新指定投资金额！</string>
+    <string name="orderfailed_2">您手慢了，此产品已经被抢购一空！</string>
+</resources>

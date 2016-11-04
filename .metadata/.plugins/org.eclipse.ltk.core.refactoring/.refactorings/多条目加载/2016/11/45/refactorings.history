@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;多条目加载&apos;&#x0D;&#x0A;- Original project: &apos;多条目加载&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     XListView.java&#x0D;&#x0A;     XListViewFooter.java&#x0D;&#x0A;     XListViewHeader.java" description="Delete elements" element1="res/layout/XListView.java" element2="res/layout/XListViewHeader.java" element3="res/layout/XListViewFooter.java" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1478094309136" subPackages="false" version="1.0"/>
+</session>

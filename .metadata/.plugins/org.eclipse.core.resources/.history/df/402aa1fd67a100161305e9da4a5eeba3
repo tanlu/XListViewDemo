@@ -1,0 +1,43 @@
+package com.example.day05_socket;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+/**
+ * 
+ * 客户端代码
+ * 
+ * Socket
+ * 套接字
+ * java中的一项网络通信技术。
+ * Socket通信。网络编程，套接字编程。
+ * 
+ * 即时通信，
+ * 
+ * 网络间数据传输：基础是IO流
+ * 
+ * @author Administrator
+ * 
+ */
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		EditText msg = (EditText) findViewById(R.id.msg);
+		
+	}
+	
+	public void send(View v){
+		new Thread(){
+			public void run() {
+				
+			};
+		}.start();
+	}
+
+}

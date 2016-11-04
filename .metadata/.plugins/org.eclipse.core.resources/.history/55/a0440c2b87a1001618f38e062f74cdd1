@@ -1,0 +1,70 @@
+package com.example.day05_socket;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+/**
+ * 
+ * 客户端代码
+ * 
+ * Socket
+ * 套接字
+ * java中的一项网络通信技术。
+ * Socket通信。网络编程，套接字编程。
+ * 
+ * 即时通信，
+ * 
+ * 网络间数据传输：基础是IO流
+ * 
+ * @author Administrator
+ * 
+ */
+public class MainActivity extends Activity {
+
+	private EditText msg;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		msg = (EditText) findViewById(R.id.msg);
+		
+	}
+	
+	public void send(View v){
+		new Thread(){
+			public void run() {
+				try {
+					//实例化Socket
+					Socket socket = new Socket("169.254.221.32", 9999);
+					//获取要传输的数据
+					String msg1 = msg.getText().toString();
+					//获取数据流
+					OutputStream outputStream = socket.getOutputStream();
+					//封装成BufferedWriter
+					BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outputStream));
+					writer.write(msg1);
+					//刷新
+					writer.flush();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}finally{
+				
+				} 
+				
+			};
+		}.start();
+	}
+
+}

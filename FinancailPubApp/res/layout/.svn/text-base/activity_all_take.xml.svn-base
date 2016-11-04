@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/il"
+        layout="@layout/top_title_layout" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/il"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="@dimen/px2dp_10"
+        android:paddingLeft="@dimen/px2dp_30"
+        android:paddingRight="@dimen/px2dp_30"
+        android:paddingTop="@dimen/px2dp_40"
+        android:paddingBottom="@dimen/px2dp_34"
+        android:text="@string/default_value"
+        android:textColor="#333333"
+        android:textSize="@dimen/px2dp_32" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_18"
+        android:layout_below="@id/tv_name"
+        android:background="#F2F2F2" />
+
+    <TextView
+        android:id="@+id/agree_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/px2dp_30"
+        android:background="@drawable/blue_round_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px2dp_26"
+        android:paddingTop="@dimen/px2dp_26"
+        android:text="查看合同"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_34" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/agree_btn"
+        android:layout_below="@id/line"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:dividerHeight="0dp" >
+    </ListView>
+
+</RelativeLayout>

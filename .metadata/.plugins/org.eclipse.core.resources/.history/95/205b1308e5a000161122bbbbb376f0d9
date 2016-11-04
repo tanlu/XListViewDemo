@@ -1,0 +1,11 @@
+package com.gjl.server;
+
+public class MyServer {
+	//服务器代码
+	/**
+	 * 1.实例化服务器ServerSocket
+	 * 2.接受
+	 * 3.获取从客户端传来的数据
+	 * 4.打印展示
+	 */
+}

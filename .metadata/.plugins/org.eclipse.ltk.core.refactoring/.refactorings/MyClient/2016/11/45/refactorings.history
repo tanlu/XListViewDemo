@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;com.example.myclient.MainActivity.onCreate().msg&apos; in &apos;com.example.myclient.MainActivity.onCreate()&apos; to field&#x0D;&#x0A;- Original project: &apos;MyClient&apos;&#x0D;&#x0A;- Original element: &apos;com.example.myclient.MainActivity.onCreate().msg&apos;&#x0D;&#x0A;- Field name: &apos;msg&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;msg&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;com.example.myclient{MainActivity.java" name="msg" selection="438 40" stamp="1478082514837" static="false" version="1.0" visibility="2"/>
+</session>

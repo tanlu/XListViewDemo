@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_46"
+        android:text="@string/default_value"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2dp_30" 
+        android:paddingBottom="@dimen/px2dp_30"
+        android:paddingTop="@dimen/px2dp_25"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px2dp_44"
+        android:paddingBottom="@dimen/px2dp_30"
+        android:paddingTop="@dimen/px2dp_25"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="#666666"
+            android:textSize="@dimen/px2dp_32" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_7"
+            android:text="@string/default_amount"
+            android:textColor="#666666"
+            android:textSize="@dimen/px2dp_32" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/date"
+        android:layout_marginLeft="@dimen/px2dp_46"
+        android:background="#FFFFFF" />
+
+</RelativeLayout>

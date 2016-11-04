@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customer="http://schemas.android.com/apk/res/com.miduo.financialmanageclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px2dp_20"
+            android:paddingTop="@dimen/px2dp_26" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="基于您的回答为您提供多元化的资产配置"
+                android:textColor="#666666"
+                android:textSize="@dimen/px2sp_32" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px2dp_66"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/px2dp_28"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="您的风险厌恶系数"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <TextView
+                    android:id="@+id/tv_data"
+                    android:layout_width="@dimen/px2dp_124"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/px2dp_20"
+                    android:background="@drawable/frame_bg_gray"
+                    android:gravity="center"
+                    android:textColor="#2ea7e0"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <com.miduo.financialmanageclient.widget.InvestmentBarPic
+                android:id="@+id/investmentBarPic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_406"
+                android:layout_marginTop="@dimen/px2dp_26"
+                android:background="@drawable/testresult"
+                customer:leftPadding="@dimen/px2dp_80"
+                customer:perBarPadding="@dimen/px2dp_54" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_1"
+                android:background="#0d9fd2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_60"
+                android:layout_marginLeft="@dimen/px2dp_52"
+                android:layout_marginRight="@dimen/px2dp_52"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/name_txt1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/default_value"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_24" />
+
+                <TextView
+                    android:id="@+id/name_txt2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/default_value"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_24" />
+
+                <TextView
+                    android:id="@+id/name_txt3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/default_value"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_24" />
+
+                <TextView
+                    android:id="@+id/name_txt4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/default_value"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f2f2f2"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px2dp_20"
+                android:paddingLeft="@dimen/px2dp_70"
+                android:paddingTop="@dimen/px2dp_38" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试时间："
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <TextView
+                    android:id="@+id/time_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_28" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px2dp_20"
+                android:paddingTop="@dimen/px2dp_26" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的年龄："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+
+                <TextView
+                    android:id="@+id/age_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:background="#ececec" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px2dp_20"
+                android:paddingTop="@dimen/px2dp_26" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的年税后收入是："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+
+                <TextView
+                    android:id="@+id/income_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:background="#ececec" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px2dp_20"
+                android:paddingTop="@dimen/px2dp_26" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的可投资资金有："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+
+                <TextView
+                    android:id="@+id/invest_amount_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_value"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/px2sp_26" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:background="#ececec" />
+
+            <TextView
+                android:id="@+id/care_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:paddingBottom="@dimen/px2dp_20"
+                android:paddingTop="@dimen/px2dp_26"
+                android:text="@string/default_value"
+                android:textColor="#666666"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:background="#ececec" />
+
+            <TextView
+                android:id="@+id/decide_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:layout_marginRight="@dimen/px2dp_30"
+                android:lineSpacingExtra="@dimen/px2dp_14"
+                android:paddingBottom="@dimen/px2dp_6"
+                android:paddingTop="@dimen/px2dp_26"
+                android:text="@string/default_value"
+                android:textColor="#666666"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/px2dp_70"
+                android:background="#ececec" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px2sp_26"
+        android:textColor="#666666"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="@string/select_planner_tips1"
+        android:layout_marginTop="@dimen/px2dp_40"
+        android:lineSpacingExtra="@dimen/px2dp_20"
+        />
+     <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/px2sp_26"
+        android:textColor="#666666"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="@string/select_planner_tips2"
+        />
+     <View 
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/px2dp_20"
+         android:background="#e4e4e4"
+         android:layout_marginTop="@dimen/px2dp_34"
+         />
+     <com.miduo.financialmanageclient.widget.LoadListView
+         android:background="#e4e4e4"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/lv_planner"
+         android:divider="#e4e4e4"
+         android:dividerHeight="@dimen/px2dp_20"
+         ></com.miduo.financialmanageclient.widget.LoadListView>
+</LinearLayout>

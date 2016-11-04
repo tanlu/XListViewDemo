@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/large_textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="监控点附近看到附近看到附近" />
+
+    <ImageView
+        android:id="@+id/large_imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher" />
+
+</LinearLayout>

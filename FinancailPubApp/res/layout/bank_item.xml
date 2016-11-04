@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/bank_img"
+        android:layout_width="@dimen/px2dp_40"
+        android:layout_height="@dimen/px2dp_40"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/px2dp_10"
+        android:src="@drawable/grey_point"
+        android:scaleType="centerInside" />
+    <TextView
+        android:id="@+id/et_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/bank_img"
+        android:singleLine="true"
+        android:text="请选择支付银行"
+        android:textColor="#999999"
+        android:textSize="@dimen/px2sp_32"/>
+
+    <ImageView
+        android:id="@+id/ib_down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/et_option"
+        android:layout_centerVertical="true"
+        android:scaleType="center"
+        android:src="@drawable/down_arrow" />
+
+</RelativeLayout>

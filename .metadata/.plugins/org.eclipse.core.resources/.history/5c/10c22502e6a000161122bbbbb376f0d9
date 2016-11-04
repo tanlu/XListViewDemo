@@ -1,0 +1,31 @@
+package com.gjl.server;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyServer {
+	//服务器代码
+	/**
+	 * 1.实例化服务器ServerSocket
+	 * 2.接受
+	 * 3.获取从客户端传来的数据
+	 * 4.打印展示
+	 */
+	public static void main(String[] args) {
+		try {
+			ServerSocket serverSocket=new ServerSocket(9999);
+			while(true){
+				Socket accept = serverSocket.accept();
+				InputStream inputStream = accept.getInputStream();
+				System.out.println("服务器收到信息："+inputStream.toString());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+}

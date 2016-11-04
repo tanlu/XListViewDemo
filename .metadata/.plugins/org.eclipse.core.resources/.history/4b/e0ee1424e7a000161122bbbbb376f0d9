@@ -1,0 +1,41 @@
+package com.example.myclient;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	public void send(View v) {
+		new Thread() {
+			public void run() {
+				// -------------
+				try {
+					System.out.println("开始发送------");
+					Socket socket = new Socket("172.17.23.31", 9999);
+					BufferedWriter writer = new BufferedWriter(
+							new OutputStreamWriter(socket.getOutputStream()));
+					writer.write("i am client");
+					writer.flush();
+					System.out.println("client-------写出");
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			};
+		}.start();
+	}
+
+}

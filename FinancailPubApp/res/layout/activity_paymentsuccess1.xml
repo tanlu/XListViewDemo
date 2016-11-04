@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title_layout" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_90"
+        android:src="@drawable/blue_commite" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px2dp_16"
+        android:gravity="center_horizontal"
+        android:text="投资成功"
+        android:textColor="#2ea7e0"
+        android:textSize="@dimen/px2sp_40" />
+
+    <View
+        android:layout_width="@dimen/px2dp_2"
+        android:layout_height="@dimen/px2dp_85"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_24"
+        android:background="#2ea7e0" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_24"
+        android:src="@drawable/blue_wait" />
+
+    <TextView
+        android:layout_width="@dimen/px2dp_406"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_16"
+        android:text="您与米多财富的合同已经成立并生效！"
+        android:textColor="#2ea7e0"
+        android:textSize="@dimen/px2sp_24" />
+
+    <View
+        android:layout_width="@dimen/px2dp_2"
+        android:layout_height="@dimen/px2dp_85"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_28"
+        android:background="#999999" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_20"
+        android:src="@drawable/grey_success" />
+
+    <TextView
+        android:layout_width="@dimen/px2dp_434"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_20"
+        android:text="您可以在“米仓”-“米多总资产”中查看资产情况"
+        android:textColor="#999999"
+        android:textSize="@dimen/px2sp_24" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_90"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue"
+        android:gravity="center"
+        android:text="炫耀一下"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_34" />
+
+    <TextView
+        android:id="@+id/tv_iknow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_90"
+        android:layout_marginBottom="@dimen/px2dp_46"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:layout_marginTop="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue_line"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="#2da8df"
+        android:textSize="@dimen/px2sp_34" />
+
+</LinearLayout>

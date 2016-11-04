@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.miduo.financialmanageclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+    <com.miduo.financialmanageclient.widget.ProTopView
+        android:id="@+id/protopview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_184"
+        custom:div_="@dimen/px2dp_30"
+        custom:inheight="@dimen/px2dp_86"
+        custom:innercell="@dimen/px2dp_38"
+        custom:inwidth="@dimen/px2dp_480"
+        custom:specing="@dimen/px2dp_40"
+        custom:textsize="@dimen/px2dp_34" />
+
+    <LinearLayout
+        android:id="@+id/ll_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_120"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll_layout1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px2dp_64"
+            android:layout_weight="1"
+            android:background="@drawable/frame_bg_gray"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="持有收益率"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_28" />
+
+            <ImageView
+                android:id="@+id/iv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px2dp_10"
+                android:src="@drawable/desc"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/px2dp_16"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_layout2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px2dp_64"
+            android:layout_weight="1"
+            android:background="@drawable/frame_bg_gray"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余期限"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_28" />
+
+            <ImageView
+                android:id="@+id/iv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px2dp_10"
+                android:src="@drawable/desc"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/px2dp_16"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_layout3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/px2dp_64"
+            android:layout_weight="1"
+            android:background="@drawable/frame_bg_gray"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转让价格"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_28" />
+
+            <ImageView
+                android:id="@+id/iv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px2dp_10"
+                android:src="@drawable/desc"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_1"
+        android:background="#cecece" />
+
+    <com.miduo.financialmanageclient.widget.LoadListView
+        android:id="@+id/lv_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#cecece"
+        android:dividerHeight="@dimen/px2dp_1"
+        android:visibility="gone" >
+    </com.miduo.financialmanageclient.widget.LoadListView>
+
+    <com.miduo.financialmanageclient.widget.LoadListView
+        android:id="@+id/lv_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </com.miduo.financialmanageclient.widget.LoadListView>
+
+    <com.miduo.financialmanageclient.widget.LoadListView
+        android:id="@+id/lv_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.miduo.financialmanageclient.widget.LoadListView>
+
+</LinearLayout>

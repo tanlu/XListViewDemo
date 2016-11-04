@@ -1,0 +1,10 @@
+package com.example.day05_multi.utils;
+/**
+ * 网络工具类
+ * @author gjl 
+ *
+ */
+public class MyHttpUtils {
+	//判断是否有网
+	//判断网络什么类型
+}

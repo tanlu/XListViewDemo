@@ -1,0 +1,118 @@
+package com.example.day05_multi.adapter;
+
+import java.util.ArrayList;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.day05_multi.R;
+import com.example.day05_multi.bean.Data;
+
+public class MyAdapter extends BaseAdapter {
+
+	private final int NO_IMAGE = 0;
+	private final int LITTLE_IMAGE = 1;
+	private final int MIDDLE_IMAGE = 2;
+	private final int LARGE_IMAGE = 3;
+	private ArrayList<Data> data;
+	private Context context;
+
+	// 构造
+	public MyAdapter(ArrayList<Data> data, Context context) {
+		this.data = data;
+		this.context = context;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return data.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// //先不优化
+		// convertView = View.inflate(context, resource, root);
+		// 获取类别--根据类别使用不同的条目布局
+		int type = getItemViewType(position);
+		//取出数据
+		Data data_item = data.get(position);
+		switch (type) {
+		// 无图
+		case 0:
+			convertView = View.inflate(context, R.layout.item_text, null);
+			//找控件
+			TextView item_title=(TextView)convertView.findViewById(R.id.item_title);
+			//赋值
+			item_title.setText(data_item.title);
+			break;
+		// 小图
+		case 1:
+			convertView = View.inflate(context, R.layout.item_little_image, null);
+			TextView item_title_little=(TextView)convertView.findViewById(R.id.item_title);
+			ImageView item_right=(ImageView) convertView.findViewById(R.id.item_right);
+			//
+			break;
+		// 中图
+		case 2:
+			convertView = View.inflate(context, R.layout.item_middle_image, null);
+			break;
+		// 大图
+		case 3:
+			convertView = View.inflate(context, R.layout.item_large_image, null);
+			break;
+		// 默认
+		default:
+			break;
+		}
+		return null;
+	}
+
+	// 类别
+
+	@Override
+	public int getItemViewType(int position) {
+		// 分类
+		// 1.取出数据
+		Data data2 = data.get(position);
+		// 如果image_list为空，large , middle 没图
+		if (data2.image_list == null && data2.middle_image == null
+				&& data2.large_image_list == null) {
+			return NO_IMAGE;
+		} else if (data2.image_list != null && data2.image_list.size() > 0
+				&& data2.middle_image == null && data2.large_image_list == null) {
+			return LITTLE_IMAGE;
+		} else if (data2.middle_image != null && data2.large_image_list == null
+				&& data2.middle_image.url_list.size() > 0) {
+			return MIDDLE_IMAGE;
+		} else if (data2.large_image_list != null
+				&& data2.large_image_list.size() > 0) {
+			return LARGE_IMAGE;
+		}
+		return NO_IMAGE;
+	}
+
+	// 类别数量
+	@Override
+	public int getViewTypeCount() {
+		// TODO Auto-generated method stub
+		return 4;
+	}
+
+}

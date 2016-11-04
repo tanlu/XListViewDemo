@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>测试</title>
+    <script type="text/javascript">
+        function test(){
+            window.android.payCompleteSuccess()
+        }
+         function test2(){
+            window.android.payCompleteFailure()
+        }
+
+    </script>
+</head>
+<body>
+<br />
+<button onclick="test()">success</button>
+<button onclick="test2()">failure</button>
+</body>
+</html>

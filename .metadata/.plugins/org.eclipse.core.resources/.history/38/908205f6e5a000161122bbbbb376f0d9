@@ -1,0 +1,27 @@
+package com.example.myclient;
+
+import java.net.Socket;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	public void send(View v) {
+		new Thread() {
+			public void run() {
+				//-------------
+			new Int
+				new Socket(, 9999);
+			};
+		}.start();
+	}
+
+}

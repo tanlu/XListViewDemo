@@ -1,0 +1,29 @@
+package com.example.day05_multi.utils;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+/**
+ * 网络工具类
+ * 
+ * @author gjl
+ * 
+ */
+public class MyHttpUtils {
+	// 判断是否有网
+	public static boolean hasNet(Context context) {
+		ConnectivityManager manager = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+		return networkInfo.isAvailable();
+	}
+
+	// 判断网络什么类型
+	public int netType() {
+		ConnectivityManager manager = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+		return networkInfo.getSubtype();
+	}
+}

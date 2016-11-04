@@ -1,0 +1,67 @@
+package com.gjl.server;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MyServer {
+	// 服务器代码
+	/**
+	 * 1.实例化服务器ServerSocket 2.接受 3.获取从客户端传来的数据 4.打印展示
+	 */
+	public static void main(String[] args) {
+		try {
+			final ServerSocket serverSocket = new ServerSocket(7777);
+			new Thread(){
+				public void run() {
+					while (true) {
+						try {
+							Socket accept = serverSocket.accept();
+							System.out.println("服务---连接成功");
+							InputStream inputStream = accept.getInputStream();
+							System.out.println("服务器收到信息：" + inputStream.toString()+"--");
+						BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+						String str = reader.readLine();
+//							String str = ss(inputStream);
+							System.out.println("server dome = "+str);
+							
+							//向客户端写东西
+							BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(accept.getOutputStream()));
+							writer.write("i am server");
+							writer.flush();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				};
+			}.start();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static String ss (InputStream inputStream){
+		ByteArrayOutputStream os = new ByteArrayOutputStream();
+		int len =0;
+		byte[] buffer = new byte[1024];
+		try {
+			while((len = inputStream.read(buffer))!=-1){
+				os.write(buffer, 0, len);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return os.toString();
+	}
+
+}

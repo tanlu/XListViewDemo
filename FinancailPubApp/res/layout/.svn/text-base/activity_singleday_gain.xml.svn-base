@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_havedata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_72"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="#2ea7e0" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="#2ea7e0"
+                android:textSize="@dimen/px2sp_66" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.miduo.financialmanageclient.widget.ScrollViewDragHelper
+                android:id="@+id/scrollviewDragHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_92"
+                android:background="#ffffff"
+                android:paddingLeft="@dimen/px2dp_42"
+                android:paddingRight="@dimen/px2dp_42" >
+
+                <com.miduo.financialmanageclient.widget.ScrollBarPic
+                    android:id="@+id/scrollBarPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px2dp_456" />
+            </com.miduo.financialmanageclient.widget.ScrollViewDragHelper>
+        </LinearLayout>
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_2"
+            android:background="#d4d4d4" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null" >
+        </ListView>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/ll_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView 
+            android:layout_marginTop="@dimen/px2dp_250"
+            android:src="@drawable/single_gain_null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_48"
+            android:text="还没有任何收益"
+            android:textSize="@dimen/px2sp_34"
+            android:textColor="#666666"
+            android:gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+</LinearLayout>

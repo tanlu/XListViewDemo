@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg" >
+    
+    <ImageView android:id="@+id/logo_img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px2dp_100"/>
+
+    <ImageView
+        android:id="@+id/logo_img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_img1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px2dp_30"
+        android:src="@drawable/miduo_logo" />
+
+    <RelativeLayout
+        android:id="@+id/tel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_img2"
+        android:layout_marginTop="@dimen/px2dp_200"
+        android:paddingLeft="@dimen/px2dp_66"
+        android:paddingRight="@dimen/px2dp_66" >
+
+        <ImageView
+            android:id="@+id/tel_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px2dp_26"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/tel_unsel" />
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tel_img"
+            android:background="@null"
+            android:gravity="bottom"
+            android:hint="请输入您的手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingBottom="@dimen/px2dp_10"
+            android:paddingTop="@dimen/px2dp_10"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_32"
+            android:textColorHint="#85d1de" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/edtName"
+            android:layout_toRightOf="@+id/tel_img"
+            android:background="#85dade" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tel_layout"
+        android:layout_marginTop="@dimen/px2dp_54"
+        android:paddingLeft="@dimen/px2dp_66"
+        android:paddingRight="@dimen/px2dp_66" >
+
+        <ImageView
+            android:id="@+id/password_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px2dp_26"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/psd_unsel" />
+
+        <EditText
+            android:id="@+id/edtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/password_img"
+            android:background="@null"
+            android:gravity="bottom"
+            android:hint="请输入登录密码"
+            android:inputType="textPassword"
+            android:maxLength="18"
+            android:paddingBottom="@dimen/px2dp_10"
+            android:paddingTop="@dimen/px2dp_10"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_32"
+            android:textColorHint="#85d1de" />
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/edtPwd"
+            android:layout_toRightOf="@+id/password_img"
+            android:background="#85dade" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/find_psd_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/password_layout"
+        android:layout_marginTop="@dimen/px2dp_20"
+        android:text="找回密码"
+        android:textColor="#5fabe6"
+        android:textSize="@dimen/px2sp_28" 
+        android:padding="@dimen/px2dp_10"
+        android:layout_marginRight="@dimen/px2dp_56"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/px2dp_20"
+        android:paddingLeft="@dimen/px2dp_56"
+        android:paddingRight="@dimen/px2dp_56" >
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="#5fabe6"
+            android:padding="@dimen/px2dp_10"
+            android:textSize="@dimen/px2sp_28" />
+
+        <TextView
+            android:id="@+id/turnin_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="随便看看"
+            android:textColor="#5fabe6"
+            android:padding="@dimen/px2dp_10"
+            android:textSize="@dimen/px2sp_28" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_78"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="@dimen/px2dp_80"
+        android:layout_marginLeft="@dimen/px2dp_66"
+        android:layout_marginRight="@dimen/px2dp_66"
+        android:background="@drawable/btn_selection"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2dp_32" />
+
+</RelativeLayout>

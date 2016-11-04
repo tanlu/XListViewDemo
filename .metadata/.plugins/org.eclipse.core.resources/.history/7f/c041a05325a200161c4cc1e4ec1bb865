@@ -1,0 +1,35 @@
+package com.example.threecache.utils;
+
+import android.graphics.Bitmap;
+import android.support.v4.util.LruCache;
+
+/**
+ * 鍐呭瓨缂撳瓨
+ * @author h
+ *
+ */
+public class MemoryCacheUtils {
+	
+	private LruCache<String, Bitmap> lruCache;
+
+	public MemoryCacheUtils(){
+		int maxSize = (int) (Runtime.getRuntime().maxMemory()/8);// 鍙栧綋鍓嶅簲鐢ㄦ渶澶у唴瀛樼殑1/8
+		lruCache = new LruCache<String, Bitmap>(maxSize){
+			// 杩斿洖鏀捐繘鍘荤殑姣忎竴寮犲浘鐗囩殑澶у皬
+			@Override
+			protected int sizeOf(String key, Bitmap value) {
+				
+				return value.getRowBytes()*value.getHeight();
+			}
+		};
+	}
+	
+	// 瀵瑰鎻愪緵浠庡唴瀛樼紦瀛樿幏鍙栧浘鐗囩殑鏂规硶
+	public Bitmap getBitmap(String url){
+		return lruCache.get(url);//鑾峰彇鍐呭瓨涓暟鎹殑鏂规硶
+	}
+	// 瀵瑰鎻愪緵寰�鍐呭瓨缂撳瓨瀛樺浘鐗囩殑鏂规硶
+	public void putBitmap(String url,Bitmap bitmap){
+		lruCache.put(url, bitmap);
+	}
+}

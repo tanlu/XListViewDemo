@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miduo.financialmanageclient.widget.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/top_layout"
+            layout="@layout/top_title_layout" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_280"
+            android:layout_below="@id/top_layout"
+            android:scaleType="fitXY"
+            android:src="@drawable/seekbar3" />
+
+        <TextView
+            android:id="@+id/tv_yearearning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout"
+            android:layout_marginLeft="@dimen/px2dp_142"
+            android:layout_marginTop="@dimen/px2dp_62"
+            android:text="年化收益"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/tv_miduorate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_yearearning"
+            android:layout_marginLeft="@dimen/px2dp_42"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_32" />
+
+        <TextView
+            android:id="@+id/tv_proterm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/top_layout"
+            android:layout_marginRight="@dimen/px2dp_42"
+            android:layout_marginTop="@dimen/px2dp_16"
+            android:text="产品期限"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_proterm"
+            android:layout_marginRight="@dimen/px2dp_14"
+            android:layout_toLeftOf="@id/tv_proterm"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_32" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_68"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="若投资"
+            android:textColor="#7f7f7f"
+            android:textSize="@dimen/px2sp_32" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/px2dp_218"
+            android:orientation="vertical" >
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/et_investment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="#2ca9de"
+                android:textSize="@dimen/px2sp_34" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_1"
+                android:background="#dce0df" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="#7f7f7f"
+            android:textSize="@dimen/px2sp_32" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/px2dp_32"
+        android:layout_marginRight="@dimen/px2dp_32"
+        android:layout_marginTop="@dimen/px2dp_60"
+        android:maxHeight="@dimen/px2dp_10"
+        android:minHeight="@dimen/px2dp_10"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/seekbar2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/start_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_52"
+            android:text="10000元"
+            android:textColor="#7f7f7f" />
+
+        <TextView
+            android:id="@+id/surplus_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px2dp_52"
+            android:text=""
+            android:textColor="#7f7f7f" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_76"
+        android:text="米多收益"
+        android:textColor="#000000"
+        android:textSize="@dimen/px2sp_32" />
+
+    <TextView
+        android:id="@+id/tv_miduoprofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_18"
+        android:text="￥"
+        android:textColor="#f6764e"
+        android:textSize="@dimen/px2sp_32" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_1"
+        android:layout_marginLeft="@dimen/px2dp_52"
+        android:layout_marginRight="@dimen/px2dp_52"
+        android:layout_marginTop="@dimen/px2dp_32"
+        android:background="#e3e3e3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_188"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="银行活期收益"
+                android:textColor="#000000"
+                android:textSize="@dimen/px2sp_32" />
+
+            <TextView
+                android:id="@+id/tv_bankcurrentprofit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_18"
+                android:text="￥0.00"
+                android:textColor="#f6764e"
+                android:textSize="@dimen/px2sp_32" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/px2dp_1"
+            android:layout_height="@dimen/px2dp_108"
+            android:layout_gravity="center_vertical"
+            android:background="#e3e3e3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="银行理财收益"
+                android:textColor="#000000"
+                android:textSize="@dimen/px2sp_32" />
+
+            <TextView
+                android:id="@+id/tv_bankprofit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_18"
+                android:text="￥0.00"
+                android:textColor="#f6764e"
+                android:textSize="@dimen/px2sp_32" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_pruchase"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_92"
+        android:layout_marginBottom="@dimen/px2dp_56"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue"
+        android:gravity="center"
+        android:text="立即投资"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_34" />
+
+</com.miduo.financialmanageclient.widget.MyLinearLayout>

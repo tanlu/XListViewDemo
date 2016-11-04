@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_30"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_48"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_proname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/default_value"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2sp_32" />
+
+            <View
+                android:layout_width="@dimen/px2dp_62"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_bg_red"
+                android:text="@string/default_value"
+                android:textColor="#f34d4d"
+                android:textSize="@dimen/px2sp_22" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_60"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_26" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_amount"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_56" />
+        </LinearLayout>
+        <!-- 支付剩余时间 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_30"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_56" >
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/default_value"
+                android:textColor="#f34d4d"
+                android:textSize="@dimen/px2sp_26" />
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px2dp_14"
+                android:layout_toLeftOf="@id/tv_time"
+                android:text="支付剩余时间"
+                android:textColor="#f34d4d"
+                android:textSize="@dimen/px2sp_26" />
+
+            <ImageView
+                android:layout_width="@dimen/px2dp_25"
+                android:layout_height="@dimen/px2dp_25" 
+                android:src="@drawable/red_clock"
+                android:scaleType="fitCenter"
+                android:layout_toLeftOf="@id/tv_tip"
+                android:layout_marginRight="@dimen/px2dp_4"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+
+        <!-- 赎回 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_redeem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_30"
+            android:layout_marginLeft="@dimen/px2dp_30"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_56"
+            android:visibility="visible" >
+
+            <ImageView
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"
+                android:src="@drawable/timer"
+                android:id="@+id/iv_pic1"
+                android:layout_width="@dimen/px2dp_27"
+                android:layout_height="@dimen/px2dp_27" />
+
+            <TextView
+                android:id="@+id/tv_redemption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_8"
+                android:layout_toRightOf="@id/iv_pic1"
+                android:text="最近赎回日："
+                android:textColor="#999999"
+                android:layout_marginRight="@dimen/px2dp_10"
+                android:textSize="@dimen/px2sp_26" />
+
+            <TextView
+                android:id="@+id/tv_redemptiontime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_8"
+                android:layout_toRightOf="@id/tv_redemption"
+                android:text="@string/default_value"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_26" />
+
+            <TextView
+                android:id="@+id/tv_redemptionday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/default_value"
+                android:textColor="#999999"
+                android:textSize="@dimen/px2sp_26" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/grey_clock"
+                android:id="@+id/iv_pic2"
+                android:layout_width="@dimen/px2dp_25"
+                android:layout_height="@dimen/px2dp_25"
+                android:layout_marginRight="@dimen/px2dp_4"
+                android:layout_toLeftOf="@id/tv_redemptionday" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

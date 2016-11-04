@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.xutils.x.Ext"/>
+<fullyQualifiedTypeName name="org.xutils.x"/>
+<fullyQualifiedTypeName name="org.xutils.http.RequestParams"/>
+<fullyQualifiedTypeName name="org.xutils.common.Callback.CommonCallback"/>
+<fullyQualifiedTypeName name="org.xutils.view.annotation.ContentView"/>
+<fullyQualifiedTypeName name="com.example.xutilsdemo.R.layout"/>
+<fullyQualifiedTypeName name="android.os.AsyncTask"/>
+<fullyQualifiedTypeName name="java.net.ServerSocket"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.bean.News"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.utils.JsonUtils"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.example.day05_socket.R.id"/>
+<fullyQualifiedTypeName name="com.example.day05_socket.views.XListView"/>
+<fullyQualifiedTypeName name="android.webkit.WebIconDatabase.IconListener"/>
+<fullyQualifiedTypeName name="com.example.day05_socket.views.XListView.IXListViewListener"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="com.example.day05_socket.MainActivity"/>
+<fullyQualifiedTypeName name="android.os.Handler"/>
+<fullyQualifiedTypeName name="android.widget.BaseAdapter"/>
+<fullyQualifiedTypeName name="android.view.View"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.R"/>
+<fullyQualifiedTypeName name="android.app.Application"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Runtime"/>
+<fullyQualifiedTypeName name="com.nostra13.universalimageloader.core.ImageLoader"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.bean.Data"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.adapter.MyAdapter"/>
+<fullyQualifiedTypeName name="com.example.day05_multi.MainActivity"/>
+<fullyQualifiedTypeName name="android.text.TextUtils"/>
+</qualifiedTypeNameHistroy>

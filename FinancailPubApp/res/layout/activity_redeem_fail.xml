@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title_layout" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/px2dp_124"
+        android:src="@drawable/error" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px2dp_42"
+        android:gravity="center_horizontal"
+        android:text="本次赎回额度已满！"
+        android:textSize="@dimen/px2sp_48" />
+
+    <TextView
+        android:id="@+id/tv_tips1"
+        android:layout_marginTop="@dimen/px2dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="要重新尝试赎回，"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2sp_24" />
+    <TextView
+        android:id="@+id/tv_tips2"
+        android:layout_marginTop="@dimen/px2dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="请在今日内联系您的理财顾问"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2sp_24" />
+    <TextView
+        android:id="@+id/tv_tips3"
+        android:layout_marginTop="@dimen/px2dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="或拨打米多客服电话400-6666-766"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2sp_24" />
+    <TextView
+        android:id="@+id/tv_tips4"
+        android:layout_marginTop="@dimen/px2dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:text="您也可以于下一赎回日重新申请赎回"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2sp_24" />
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/tv_iknow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_90"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue"
+        android:gravity="center"
+        android:text="我知道了"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_34" />
+
+
+    <TextView
+        android:id="@+id/tv_callmiduo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_90"
+        android:layout_marginBottom="@dimen/px2dp_30"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:layout_marginTop="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue_line"
+        android:gravity="center"
+        android:text="咨询米多客服"
+        android:textColor="#2da8df"
+        android:textSize="@dimen/px2sp_34" />
+
+</LinearLayout>

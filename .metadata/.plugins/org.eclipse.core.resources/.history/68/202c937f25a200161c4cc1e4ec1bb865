@@ -1,0 +1,41 @@
+package com.example.threecache.utils;
+
+import android.graphics.Bitmap;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+public class ImageCacheUtils {
+
+	private MemoryCacheUtils memoryCacheUtils;
+	private LocalCacheUtils localCacheUtils;
+	private NetCacheUtils netCacheUtils;
+
+	public ImageCacheUtils() {
+		memoryCacheUtils = new MemoryCacheUtils();
+		localCacheUtils = new LocalCacheUtils(memoryCacheUtils);
+		netCacheUtils = new NetCacheUtils(memoryCacheUtils,localCacheUtils);
+	}
+
+	public void display(ImageView imageView, String url, ListView lv_photo_list) {
+		/**
+		 * 1銆佷粠鍐呭瓨缂撳瓨涓彇鍥剧墖锛氬彇鍒板氨灞曠ず 2銆佸彇涓嶅埌锛屼粠鏈湴缂撳瓨涓彇鍥剧墖锛氬彇鍒板氨灞曠ず 3銆佸彇涓嶅埌锛屼粠缃戠粶涓幏鍙栧浘鐗囷細 3.1銆佸彇鍒板氨灞曠ず
+		 * 3.2銆佸線鍐呭瓨鍜屾湰鍦伴兘瀛樹竴浠�
+		 */
+		Bitmap bitmap = null;
+		bitmap = memoryCacheUtils.getBitmap(url);// 1銆佷粠鍐呭瓨缂撳瓨涓彇鍥剧墖
+		if (bitmap != null) {
+			imageView.setImageBitmap(bitmap);
+			System.out.println("浠庡唴瀛樼紦瀛樹腑鍙栧浘鐗�");
+			return;
+		}
+		bitmap = localCacheUtils.getBitmap(url);// 2銆佷粠鏈湴缂撳瓨涓彇鍥剧墖
+		if (bitmap != null) {
+			imageView.setImageBitmap(bitmap);
+			System.out.println("浠庢湰鍦扮紦瀛樹腑鍙栧浘鐗�");
+			return;
+		}
+		netCacheUtils.display(url, imageView,lv_photo_list);
+		System.out.println("浠庣綉缁滀腑鑾峰彇鍥剧墖");
+		// 3浠庣綉缁滀腑鑾峰彇鍥剧墖锛岃幏鍙栧悗鐩存帴灞曠ず
+	}
+}

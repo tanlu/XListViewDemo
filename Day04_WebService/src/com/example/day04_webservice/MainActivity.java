@@ -1,0 +1,91 @@
+package com.example.day04_webservice;
+
+import java.io.IOException;
+
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+import org.xmlpull.v1.XmlPullParserException;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+/**
+ * webservice 
+ * 浏览器，移动设备，服务器，智能硬件，开发平台不一样。
+ * 服务商提供用户接口，然后告诉我这个接口里面有什么功能，怎么调用
+ * 
+ * @author Administrator
+ * 
+ */
+public class MainActivity extends Activity {
+	private String namespace = "http://www.36wu.com/";
+	private String name = "GetWeather";
+	private String AuthKey = "d3b630e80ea04c8d8ef493c31a004af7";
+	private String url = "http://web.36wu.com/WeatherService.asmx?WSDL";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		intiView();
+
+	}
+
+	private void intiView() {
+		final EditText distance = (EditText) findViewById(R.id.distance);
+		Button send = (Button) findViewById(R.id.send);
+		send.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+
+				new Thread() {
+					public void run() {
+						String di = distance.getText().toString();
+						// 开始WebService的使用
+						SoapObject soapObject = new SoapObject(namespace, name);
+						// 设置参数参数
+						soapObject.addProperty("district", di);
+						soapObject.addProperty("authkey", AuthKey);
+						// 得到HttpTransportSE对象,设置访问url
+						HttpTransportSE se = new HttpTransportSE(url);
+						// 得到serializationEnvelope對象,设置Soap版本号
+						SoapSerializationEnvelope serializationEnvelope = new SoapSerializationEnvelope(
+								SoapEnvelope.VER11);
+						// 设置发送给服务器的信息
+						serializationEnvelope.bodyOut = soapObject;
+						// 设置支持.NET语言，php,javaweb,python...
+						serializationEnvelope.dotNet = true;
+						// 调用call方法
+						try {
+							se.call("http://www.36wu.com/GetWeather",
+									serializationEnvelope);
+							// 接受数据
+							// 设置发送给服务器的信息
+							// 得到服务器返回的数据
+							SoapObject soapObject_in = (SoapObject) serializationEnvelope.bodyIn;
+							System.out.println("============"
+									+ soapObject_in.toString());
+							// 得到GetWeatherResult字段下包含的信息
+							SoapObject getWeatherResult = (SoapObject) soapObject_in
+									.getProperty("GetWeatherResult");
+							SoapObject data = (SoapObject) getWeatherResult
+									.getProperty("data");
+							System.out.println(data.toString());
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					};
+				}.start();
+
+			}
+		});
+	}
+}

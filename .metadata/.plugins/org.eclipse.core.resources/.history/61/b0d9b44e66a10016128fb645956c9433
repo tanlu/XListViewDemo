@@ -1,0 +1,22 @@
+package com.bawei.myserver;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+/**
+ * Socket服务器代码
+ * @author Administrator
+ *
+ */
+public class MyServer {
+	public static void main(String[] args) {
+		try {
+			//实例化ServerSocket
+			ServerSocket serverSocket = new ServerSocket(9999);
+			//accept，阻塞线程，等待客户端连接
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

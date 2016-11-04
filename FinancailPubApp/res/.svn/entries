@@ -1,0 +1,85 @@
+10
+
+dir
+37747
+svn://192.168.4.88/code/new_Solutions/Android/FinancailPubApp/res
+svn://192.168.4.88
+
+
+
+2015-12-15T06:35:04.182114Z
+37702
+huozhenpeng
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+082aa823-2fa7-40ea-9b79-dccef1e11569
+
+anim
+dir
+
+color
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+drawable-xxhdpi
+dir
+
+layout
+dir
+
+layout-h500dp-normal
+dir
+
+layout-sw550dp-large
+dir
+
+menu
+dir
+
+values
+dir
+
+values-1280x720
+dir
+
+values-1920x1080
+dir
+
+values-sw600dp
+dir
+
+values-sw720dp-land
+dir
+
+values-v11
+dir
+
+values-v14
+dir
+

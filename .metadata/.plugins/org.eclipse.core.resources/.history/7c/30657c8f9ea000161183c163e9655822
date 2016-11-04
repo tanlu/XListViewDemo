@@ -1,0 +1,28 @@
+package com.example.day04_asynctask;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+	private String imag_url="http://img.tuku.cn/file_big/201504/83e0e5df87024855a2976690e7dd1188.jpg";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    //自己的类继承AsyncTask
+     class MyTask extends AsyncTask<String, Void, Bitmap>{
+    	 //必须重写，子线程doInBackground
+		@Override
+		protected Bitmap doInBackground(String... params) {
+			String url = params[0];
+			//访问网络
+			
+			return null;
+		}
+    	
+    }
+}

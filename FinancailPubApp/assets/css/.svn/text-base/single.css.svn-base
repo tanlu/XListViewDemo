@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background-color:#f7f7f7; font-family:"宋体"; }
+.container{ width:92.1%; margin:0 auto; padding:20px 0}
+header{ height:92px; line-height:92px; border-top:1px solid #7b7f81;border-bottom:1px solid #cacaca; background-color:#fff; position:relative; text-align:center;font-size:34px; color:#333333}
+header a.back{ width:25px; height:40px; background-image:url(../img/header_arrow.png); background-repeat:no-repeat; background-size:100% 100%; position:absolute; left:25px; top:27px;}
+.container p,li{ line-height:35px; font-size:18px;}
+.container p.h,li.h{ font-weight:bold; color:#000; padding-bottom:10px;}
+
+@media screen and (max-width: 640px) {
+.container{ padding:15px 0}
+header{ height:57px; line-height:57px;font-size:21px;}
+header a.back{ width:15px; height:25px;left:16px; top:16px;}
+.container p,li{ line-height:25px; font-size:16px;}
+}
+
+@media screen and (max-width: 400px) {
+.container{ padding:11px 0}
+header{ height:45px; line-height:45px;font-size:17px;}
+header a.back{ width:12px; height:20px;left:13px; top:13px;}
+.container p,li{ line-height:22px; font-size:13px;}
+
+}

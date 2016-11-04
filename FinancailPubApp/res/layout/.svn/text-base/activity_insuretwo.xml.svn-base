@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:background="#fafafa"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px2dp_25"
+        android:paddingTop="@dimen/px2dp_34" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_56"
+            android:layout_marginRight="@dimen/px2dp_56"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/one_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_process"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#2EA7E0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_process"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#dfdfdf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_process"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#dfdfdf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_process"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_26" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#dfdfdf" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grey_process"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/px2sp_26" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px2dp_27"
+            android:text="了解您的真实信息以便作出专业的投保规划"
+            android:textColor="#666666"
+            android:textSize="@dimen/px2sp_32" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress_layout"
+        android:layout_marginTop="@dimen/px2dp_46"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_40" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px2dp_10"
+                android:layout_marginRight="@dimen/px2dp_10"
+                android:text="配偶信息"
+                android:textColor="#666666"
+                android:textSize="@dimen/px2dp_28" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px2dp_98"
+                android:layout_toLeftOf="@+id/textView1"
+                android:background="#dfdfdf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px2dp_98"
+                android:layout_toRightOf="@+id/textView1"
+                android:background="#dfdfdf" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_60"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="配 \u3000\u3000\u3000偶"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/px2dp_54"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/peiou_you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/checked_you_wu"
+                    android:drawablePadding="@dimen/px2dp_10"
+                    android:paddingLeft="0dp"
+                    android:text="有"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2dp_32" />
+
+                <RadioButton
+                    android:id="@+id/peiou_wu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_42"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checked_you_wu"
+                    android:drawablePadding="@dimen/px2dp_10"
+                    android:paddingLeft="0dp"
+                    android:text="无"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2dp_32" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_66"
+            android:layout_marginLeft="@dimen/px2dp_60"
+            android:layout_marginTop="@dimen/px2dp_40" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="配&#160;偶&#160;年&#160;&#160;龄"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32" />
+
+            <EditText
+                android:id="@+id/nianling"
+                android:layout_width="@dimen/px2dp_184"
+                android:layout_height="@dimen/px2dp_66"
+                android:layout_marginLeft="@dimen/px2dp_20"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/grey_text_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px2dp_25"
+                android:layout_toRightOf="@+id/nianling"
+                android:text="岁"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32" />
+        </RelativeLayout>
+
+      
+        
+        <RelativeLayout
+             android:id="@+id/rl_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_66"
+            android:layout_marginTop="@dimen/px2dp_40" 
+            android:layout_marginLeft="@dimen/px2dp_60">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="配偶年收入"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32"  />
+
+            <EditText
+                android:id="@+id/shouru"
+                android:layout_width="@dimen/px2dp_184"
+                android:layout_height="@dimen/px2dp_66"
+                android:layout_marginLeft="@dimen/px2dp_20"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/grey_text_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_25"
+                android:layout_toRightOf="@+id/shouru"
+                android:text="万"
+                android:layout_centerVertical="true"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32"  />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rl_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_66"
+            android:layout_marginTop="@dimen/px2dp_40" 
+            android:layout_marginLeft="@dimen/px2dp_60">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="配偶年支出"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32"  />
+
+            <EditText
+                android:id="@+id/zhichu"
+                android:layout_width="@dimen/px2dp_184"
+                android:layout_height="@dimen/px2dp_66"
+                android:layout_marginLeft="@dimen/px2dp_20"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/grey_text_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="#2da8df"
+                android:textSize="@dimen/px2sp_32" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px2dp_25"
+                android:layout_toRightOf="@+id/zhichu"
+                android:text="万"
+                android:textColor="#333333"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/px2dp_32"/>
+        </RelativeLayout>
+
+        
+        <LinearLayout
+            android:id="@+id/rl_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px2dp_40"
+            android:orientation="horizontal" 
+            android:layout_marginLeft="@dimen/px2dp_60">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"                
+                android:text="配&#160;偶&#160;社&#160;&#160;保"
+                android:textColor="#333333"
+                android:textSize="@dimen/px2dp_32" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/px2dp_54"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/shebao_you"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableLeft="@drawable/checked_you_wu"
+                    android:drawablePadding="@dimen/px2dp_10"
+                    android:paddingLeft="0dp"
+                    android:text="有"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2dp_32" />
+
+                <RadioButton
+                    android:id="@+id/shebao_wu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_42"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/checked_you_wu"
+                    android:drawablePadding="@dimen/px2dp_10"
+                    android:paddingLeft="0dp"
+                    android:text="无"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2dp_32" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/px2dp_30"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="@drawable/blue_round_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px2dp_26"
+        android:paddingTop="@dimen/px2dp_26"
+        android:text="下一步"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_34" />
+
+</RelativeLayout>

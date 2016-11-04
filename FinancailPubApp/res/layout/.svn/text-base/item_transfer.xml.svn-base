@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px2dp_40"
+        android:layout_marginTop="@dimen/px2dp_40"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:background="@drawable/frame_bg_red"
+            android:text="@string/default_value"
+            android:textColor="#f34d4d"
+            android:textSize="@dimen/px2sp_22" />
+
+        <TextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_toLeftOf="@id/tv_status"
+            android:text="@string/default_amount"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_28" />
+
+        <TextView
+            android:id="@+id/tv_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_discount"
+            android:layout_marginRight="@dimen/px2dp_4"
+            android:layout_toLeftOf="@id/tv_discount"
+            android:text="￥"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_28" />
+
+        <TextView
+            android:id="@+id/tv_discounttip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_symbol"
+            android:layout_marginRight="@dimen/px2dp_4"
+            android:layout_toLeftOf="@id/tv_symbol"
+            android:text="@string/default_value"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_28" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tv_status"
+            android:layout_below="@id/tv_discount"
+            android:layout_marginTop="@dimen/px2dp_20"
+            android:text="@string/default_amount"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_38" />
+
+        <TextView
+            android:id="@+id/tv_symbol2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_marginRight="@dimen/px2dp_4"
+            android:layout_toLeftOf="@id/tv_money"
+            android:text="￥"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_marginLeft="@dimen/px2dp_30"
+            android:text="0.0"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_38" />
+
+        <TextView
+            android:id="@+id/tv_symbol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_toRightOf="@id/tv_percent"
+            android:text="%"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_marginLeft="@dimen/px2dp_46"
+            android:layout_toRightOf="@id/tv_symbol1"
+            android:text="@string/default_numerical"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_38" />
+
+        <TextView
+            android:id="@+id/tv_daysymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_money"
+            android:layout_toRightOf="@id/tv_day"
+            android:text="天"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2dp_26" />
+
+        <ImageView
+            android:id="@+id/iv_timer"
+            android:layout_width="@dimen/px2dp_26"
+            android:layout_height="@dimen/px2dp_26"
+            android:layout_below="@id/tv_discount"
+            android:layout_marginLeft="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_108"
+            android:src="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_discount"
+            android:layout_marginLeft="@dimen/px2dp_10"
+            android:layout_marginTop="@dimen/px2dp_102"
+            android:layout_toRightOf="@id/iv_timer"
+            android:text="@string/default_value"
+            android:textColor="#999999" />
+
+        <TextView
+            android:id="@+id/tv_proname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_discount"
+            android:layout_marginLeft="@dimen/px2dp_90"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_102"
+            android:layout_toRightOf="@id/tv_hour"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="@string/default_value" />
+    </RelativeLayout>
+
+</LinearLayout>

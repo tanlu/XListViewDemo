@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingBottom="@dimen/px2dp_44"
+    android:paddingLeft="@dimen/px2dp_30"
+    android:paddingRight="@dimen/px2dp_30"
+    android:paddingTop="@dimen/px2dp_33" >
+
+    <ImageView
+        android:id="@+id/sel_img"
+        android:layout_width="@dimen/px2dp_35"
+        android:layout_height="@dimen/px2dp_35"
+        android:src="@drawable/un_select" />
+
+    <TextView
+        android:id="@+id/product_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px2dp_10"
+        android:layout_toRightOf="@id/sel_img"
+        android:lineSpacingExtra="@dimen/px2dp_20"
+        android:text="@string/default_value"
+        android:textColor="#333333"
+        android:textSize="@dimen/px2sp_32" />
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/sel_img"
+        android:layout_below="@id/product_name_txt"
+        android:layout_marginTop="@dimen/px2dp_22"
+        android:background="#ececec" />
+
+    <TextView
+        android:id="@+id/redeem_amount_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/product_name_txt"
+        android:layout_below="@id/liner"
+        android:layout_marginTop="@dimen/px2dp_40"
+        android:text="赎回金额"
+        android:textColor="#666666"
+        android:textSize="@dimen/px2sp_28" />
+
+    <TextView
+        android:id="@+id/amount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/liner"
+        android:layout_marginTop="@dimen/px2dp_24"
+        android:text="@string/default_amount"
+        android:textColor="#2ea7e0"
+        android:textSize="@dimen/px2sp_46" />
+
+    <TextView
+        android:id="@+id/amount_unit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/liner"
+        android:layout_marginTop="@dimen/px2dp_38"
+        android:layout_toLeftOf="@id/amount_txt"
+        android:text="￥"
+        android:textColor="#2ea7e0"
+        android:textSize="@dimen/px2sp_32" />
+
+    <LinearLayout
+        android:id="@+id/appoint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redeem_amount_title_txt"
+        android:layout_marginTop="@dimen/px2dp_28"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/china_amount_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/default_value"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/btn_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px2dp_44"
+            android:background="@drawable/blue_round_bg"
+            android:paddingBottom="@dimen/px2dp_16"
+            android:paddingLeft="@dimen/px2dp_80"
+            android:paddingRight="@dimen/px2dp_80"
+            android:paddingTop="@dimen/px2dp_16"
+            android:text="指定"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px2sp_34" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/org_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/redeem_amount_title_txt"
+        android:layout_marginTop="@dimen/px2dp_28" >
+
+        <TextView
+            android:id="@+id/org_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_value"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_26" />
+
+        <TextView
+            android:id="@+id/org_code_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_20"
+            android:layout_toRightOf="@id/org_name_txt"
+            android:text="@string/default_value"
+            android:textColor="#999999"
+            android:textSize="@dimen/px2sp_26" />
+        
+        <TextView
+            android:id="@+id/no_code_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未指定收款银行卡"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/px2sp_26"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

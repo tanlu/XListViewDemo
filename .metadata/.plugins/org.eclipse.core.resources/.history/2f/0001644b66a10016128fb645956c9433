@@ -1,0 +1,11 @@
+package com.bawei.myserver;
+/**
+ * Socket·şÎñÆ÷´úÂë
+ * @author Administrator
+ *
+ */
+public class MyServer {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,86 @@
+package com.example.day05_multi.adapter;
+
+import java.util.ArrayList;
+
+import com.example.day05_multi.bean.Data;
+
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+
+public class MyAdapter extends BaseAdapter {
+
+	private final int NO_IMAGE = 0;
+	private final int LITTLE_IMAGE = 0;
+	private final int MIDDLE_IMAGE = 0;
+	private final int LARGE_IMAGE = 0;
+	private ArrayList<Data> data;
+
+	//构造
+	public MyAdapter(ArrayList<Data> data){
+		this.data = data;
+	}
+	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return data.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+//		//先不优化
+//		convertView = View.inflate(context, resource, root);
+		//获取类别--根据类别使用不同的条目布局
+		int type = getItemViewType(position);
+		switch (type) {
+		case NO_IMAGE:
+			
+			break;
+
+		default:
+			break;
+		}
+		return null;
+	}
+
+	// 类别
+
+	@Override
+	public int getItemViewType(int position) {
+//		分类
+		//1.取出数据
+		Data data2 = data.get(position);
+		//如果image_list为空，large , middle 没图
+		if (data2.image_list==null && data2.middle_image==null&&data2.large_image_list==null) {
+			return NO_IMAGE;
+		}else if(data2.image_list!=null &&data2.image_list.size()>0&& data2.middle_image==null&&data2.large_image_list==null){
+			return LITTLE_IMAGE;
+		}else if(data2.middle_image!=null&&data2.large_image_list==null&&data2.middle_image.url_list.size()>0){
+			return MIDDLE_IMAGE;
+		}else if(data2.large_image_list!=null&&data2.large_image_list.size()>0){
+			return LARGE_IMAGE;
+		}
+		return NO_IMAGE;
+	}
+
+	// 类别数量
+	@Override
+	public int getViewTypeCount() {
+		// TODO Auto-generated method stub
+		return 4;
+	}
+
+}

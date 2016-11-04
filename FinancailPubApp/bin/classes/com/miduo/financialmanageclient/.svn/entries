@@ -1,0 +1,61 @@
+10
+
+dir
+37747
+svn://192.168.4.88/code/new_Solutions/Android/FinancailPubApp/src/com/miduo/financialmanageclient
+svn://192.168.4.88
+
+
+
+2015-12-15T08:41:34.559335Z
+37747
+huozhenpeng
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+082aa823-2fa7-40ea-9b79-dccef1e11569
+
+application
+dir
+
+bean
+dir
+
+common
+dir
+
+listener
+dir
+
+receiver
+dir
+
+service
+dir
+
+ui
+dir
+
+util
+dir
+
+widget
+dir
+
+ws
+dir
+
+wxapi
+dir
+

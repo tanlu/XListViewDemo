@@ -1,0 +1,5 @@
+package com.example.threecache.utils;
+
+public class MyImageCacheUtil {
+
+}

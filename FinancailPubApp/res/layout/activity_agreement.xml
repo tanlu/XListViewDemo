@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px2dp_100"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:gravity="center_vertical"
+        android:text="共有三份合同需要您阅读并同意,请仔细阅读"
+        android:textColor="#999999"
+        android:textSize="@dimen/px2dp_24" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_119"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/iv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/down_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="《产品受益权转让暨赎回交易规则》"
+            android:textColor="#2EA7E0"
+            android:textSize="@dimen/px2dp_32" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_119"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:layout_marginTop="@dimen/px2dp_29"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/iv_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/down_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="《产品受益权转让暨赎回交易规则》"
+            android:textColor="#2EA7E0"
+            android:textSize="@dimen/px2dp_32" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_119"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:layout_marginTop="@dimen/px2dp_29"
+        android:background="#FFFFFF" >
+
+        <ImageView
+            android:id="@+id/iv_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px2dp_10"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/down_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="《产品受益权转让暨赎回交易规则》"
+            android:textColor="#2EA7E0"
+            android:textSize="@dimen/px2dp_32" />
+
+    </RelativeLayout>
+
+</LinearLayout>

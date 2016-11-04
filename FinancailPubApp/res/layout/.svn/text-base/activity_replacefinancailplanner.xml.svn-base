@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_86"
+        android:layout_marginBottom="@dimen/px2dp_32"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:layout_marginTop="@dimen/px2dp_32"
+        android:background="@drawable/frame_bg_gray2" >
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/et_plannercode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入您心仪理财顾问的邀请码"
+            android:paddingLeft="@dimen/px2dp_26"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_32" />
+
+        <TextView
+            android:id="@+id/tv_faname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/px2dp_166"
+            android:gravity="center_vertical"
+            android:text="理财顾问赵**"
+            android:textColor="#666666"
+            android:textSize="@dimen/px2dp_32"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_faselect"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px2dp_82"
+        android:layout_marginBottom="@dimen/px2dp_32"
+        android:layout_marginLeft="@dimen/px2dp_30"
+        android:layout_marginRight="@dimen/px2dp_30"
+        android:background="@drawable/button_bg_blue"
+        android:gravity="center"
+        android:text="选为我的理财顾问"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px2sp_32"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2dp_77"
+            android:background="#f2f2f2"
+            android:paddingLeft="@dimen/px2dp_50"
+            android:paddingTop="@dimen/px2dp_28"
+            android:text="若无理财顾问邀请码，您可以选择理财顾问"
+            android:textColor="#2da8df"
+            android:textSize="@dimen/px2sp_26" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:layout_marginTop="@dimen/px2dp_38"
+            android:src="@drawable/down_arrow" />
+    </RelativeLayout>
+
+    <com.miduo.financialmanageclient.widget.LoadListView
+        android:id="@+id/lv_planner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e4e4e4"
+        android:divider="#f2f2f2"
+        android:dividerHeight="@dimen/px2dp_20" >
+    </com.miduo.financialmanageclient.widget.LoadListView>
+
+</LinearLayout>

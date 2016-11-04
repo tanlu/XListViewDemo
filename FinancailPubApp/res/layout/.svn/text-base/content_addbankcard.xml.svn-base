@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <com.miduo.financialmanageclient.widget.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px2dp_30"
+            android:layout_marginRight="@dimen/px2dp_30"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_26"
+                android:text="请准确填写下列必要信息"
+                android:textColor="#2da7e1"
+                android:textSize="@dimen/px2sp_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_40"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户姓名"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <TextView
+                    android:id="@+id/name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:background="@null"
+                    android:text="@string/default_value"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:layout_marginTop="@dimen/px2dp_35"
+                android:background="#f2f2f2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_35"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <TextView
+                    android:id="@+id/id_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:background="@null"
+                    android:text="@string/default_value"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:layout_marginTop="@dimen/px2dp_38"
+                android:background="#f2f2f2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_10"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sel_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px2dp_92"
+                    android:gravity="center_vertical"
+                    android:text="选择银行"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <include
+                    android:id="@+id/bank_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px2dp_92"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:layout_toRightOf="@id/sel_title_txt"
+                    layout="@layout/bank_item" />
+
+                <ImageView
+                    android:id="@+id/bank_info_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sel_title_txt"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f5f5"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:layout_marginTop="@dimen/px2dp_10"
+                android:background="#f2f2f2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/px2dp_38"
+                    android:paddingTop="@dimen/px2dp_35"
+                    android:text="银行卡号"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <EditText
+                    android:id="@+id/et_banknumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:textColorHint="#999999"
+                    android:textColor="#333333"
+                    android:background="@null"
+                    android:hint="请输入支付银行卡号码"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/px2dp_38"
+                    android:paddingTop="@dimen/px2dp_35"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:background="#f2f2f2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px2dp_63"
+                android:text="建议填写"
+                android:textColor="#2da7e1"
+                android:textSize="@dimen/px2sp_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/px2dp_28"
+                    android:paddingTop="@dimen/px2dp_38"
+                    android:text="所  在  地"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <EditText
+                    android:id="@+id/address_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:background="@null"
+                    android:hint="请输入开户支行所在的省市区"
+                    android:textColorHint="#999999"
+                    android:textColor="#333333"
+                    android:paddingBottom="@dimen/px2dp_28"
+                    android:paddingTop="@dimen/px2dp_38"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:background="#f2f2f2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/px2dp_42"
+                    android:paddingTop="@dimen/px2dp_38"
+                    android:text="开户支行"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/px2sp_32" />
+
+                <EditText
+                    android:id="@+id/branch_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px2dp_24"
+                    android:background="@null"
+                    android:hint="请输入具体开户支行名称"
+                    android:textColorHint="#999999"
+                    android:textColor="#333333"
+                    android:paddingBottom="@dimen/px2dp_42"
+                    android:paddingTop="@dimen/px2dp_38"
+                    android:textSize="@dimen/px2sp_32" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px2dp_2"
+                android:background="#f2f2f2" />
+        </LinearLayout>
+    </com.miduo.financialmanageclient.widget.MyScrollView>
+
+</LinearLayout>

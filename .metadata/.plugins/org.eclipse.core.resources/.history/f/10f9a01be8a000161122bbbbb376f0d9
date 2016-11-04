@@ -1,0 +1,55 @@
+package com.example.myclient;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+
+	private EditText msg;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		msg = (EditText) findViewById(R.id.mesg);
+
+	}
+
+	public void send(View v) {
+		new Thread() {
+			public void run() {
+				// -------------
+				try {
+					System.out.println("开始发送------");
+					Socket socket = new Socket("172.17.23.31", 9999);
+					BufferedWriter writer = new BufferedWriter(
+							new OutputStreamWriter(socket.getOutputStream()));
+					writer.write(msg.getText().toString());
+					writer.flush();
+					System.out.println("client-------写出");
+					//
+					System.out.println("开始读取服务器代码");
+					InputStream inputStream = socket.getInputStream();
+					System.out.println("服务器收到信息：" + inputStream.toString());
+					BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+					String str = reader.readLine();
+					System.out.println("client 收到 = "+str);
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			};
+		}.start();
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;三级缓存&apos;&#x0D;&#x0A;- Original project: &apos;三级缓存&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.example.threecache.utils.LocalCache.java&#x0D;&#x0A;     com.example.threecache.utils.MemeryCache.java&#x0D;&#x0A;     com.example.threecache.utils.MyImageCacheUtil.java&#x0D;&#x0A;     com.example.threecache.utils.NetCache.java" description="Delete elements" element1="/src&lt;com.example.threecache.utils{MyImageCacheUtil.java" element2="/src&lt;com.example.threecache.utils{MemeryCache.java" element3="/src&lt;com.example.threecache.utils{NetCache.java" element4="/src&lt;com.example.threecache.utils{LocalCache.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1478218750888" subPackages="false" version="1.0"/>
+</session>

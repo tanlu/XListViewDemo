@@ -1,0 +1,7 @@
+1478137922412	Convert local variable 'msg' to field
+1478152049766	Convert local variable 'listView' to field
+1478152255796	Extract local variable 'adapter'
+1478152258516	Convert local variable 'adapter' to field
+1478174596385	Copy compilation units
+1478174614520	Copy files
+1478174657909	Copy file

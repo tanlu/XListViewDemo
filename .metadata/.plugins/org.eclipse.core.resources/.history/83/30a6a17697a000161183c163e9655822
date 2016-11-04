@@ -1,0 +1,29 @@
+package com.example.day04_webservice;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+/**
+ * webservice
+ * 		服务商提供用户接口，然后告诉我这个接口里面有什么功能，怎么调用
+ * @author Administrator
+ *
+ */
+public class MainActivity extends Activity {
+	private String namespace="http://www.36wu.com/";
+	private String name = "GetWeather";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}

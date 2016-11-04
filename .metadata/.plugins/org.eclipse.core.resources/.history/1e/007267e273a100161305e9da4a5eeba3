@@ -1,0 +1,9 @@
+package com.example.day05_multi.utils;
+/**
+ * ÍøÂç¹¤¾ßÀà
+ * @author gjl 
+ *
+ */
+public class MyHttpUtils {
+	
+}
