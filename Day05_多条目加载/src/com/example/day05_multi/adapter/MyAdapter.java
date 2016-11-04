@@ -24,7 +24,7 @@ public class MyAdapter extends BaseAdapter {
 	private ArrayList<Data> data;
 	private Context context;
 
-	// ¹¹Ôì
+	// æ„é€ 
 	public MyAdapter(ArrayList<Data> data, Context context) {
 		this.data = data;
 		this.context = context;
@@ -50,23 +50,23 @@ public class MyAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// //ÏÈ²»ÓÅ»¯
+		// //å…ˆä¸ä¼˜åŒ–
 		// convertView = View.inflate(context, resource, root);
-		// »ñÈ¡Àà±ğ--¸ù¾İÀà±ğÊ¹ÓÃ²»Í¬µÄÌõÄ¿²¼¾Ö
+		// è·å–ç±»åˆ«--æ ¹æ®ç±»åˆ«ä½¿ç”¨ä¸åŒçš„æ¡ç›®å¸ƒå±€
 		int type = getItemViewType(position);
-		// È¡³öÊı¾İ
+		// å–å‡ºæ•°æ®
 		Data data_item = data.get(position);
 		switch (type) {
-		// ÎŞÍ¼
+		// æ— å›¾
 		case 0:
 			convertView = View.inflate(context, R.layout.item_text, null);
-			// ÕÒ¿Ø¼ş
+			// æ‰¾æ§ä»¶
 			TextView item_title = (TextView) convertView
 					.findViewById(R.id.item_title);
-			// ¸³Öµ
+			// èµ‹å€¼
 			item_title.setText(data_item.title);
 			break;
-		// Ğ¡Í¼
+		// å°å›¾
 		case 1:
 			convertView = View.inflate(context, R.layout.item_little_image,
 					null);
@@ -74,13 +74,13 @@ public class MyAdapter extends BaseAdapter {
 					.findViewById(R.id.item_title);
 			ImageView item_right = (ImageView) convertView
 					.findViewById(R.id.item_right);
-			// Ê¹ÓÃIamgeLoader¼ÓÔØÍøÂçÍ¼Æ¬
+			// ä½¿ç”¨IamgeLoaderåŠ è½½ç½‘ç»œå›¾ç‰‡
 			ImageLoader instance = ImageLoader.getInstance();
 			instance.displayImage(
 					data_item.middle_image.url_list.get(0).url, item_right);
 			item_title_little.setText(data_item.title);
 			break;
-		// ÖĞÍ¼ 3ÕÅ
+		// ä¸­å›¾ 3å¼ 
 		case 2:
 			convertView = View.inflate(context, R.layout.item_middle_image,
 					null);
@@ -101,10 +101,10 @@ public class MyAdapter extends BaseAdapter {
 					item_middle3);
 			item_title_middle.setText(data_item.title);
 			break;
-		// ´óÍ¼
+		// å¤§å›¾
 		case 3:
 			
-			Log.d("Adapter", "´óÍ¼"+data_item.large_image_list.size());
+			Log.d("Adapter", "å¤§å›¾"+data_item.large_image_list.size());
 			if (data_item.large_image_list.size()>0) {
 				convertView = View
 						.inflate(context, R.layout.item_large_image, null);
@@ -116,57 +116,57 @@ public class MyAdapter extends BaseAdapter {
 			}
 			
 			break;
-		// Ä¬ÈÏ
+		// é»˜è®¤
 		default:
 			break;
 		}
 		return convertView;
 	}
 
-	// Àà±ğ
+	// ç±»åˆ«
 
 	/**
-	 * È«²¿Îª¿Õ£¬size= 0 ÎŞÍ¼ data2.image_list data2.middle_image¶ÔÏó
-	 * data2.middle_image.url_list ¼¯ºÏ data2.large_image_list
+	 * å…¨éƒ¨ä¸ºç©ºï¼Œsize= 0 æ— å›¾ data2.image_list data2.middle_imageå¯¹è±¡
+	 * data2.middle_image.url_list é›†åˆ data2.large_image_list
 	 * 
-	 * ÎŞÍ¼
+	 * æ— å›¾
 	 *  (data2.image_list==null || data2.image_list.size()==0)&&(data2.middle_image==null || data2.middle_image.url_list==null
 	 * data2.middle_image.url_list.size()=0)&&(data2.large_image_list==null||data2.large_image_list.size()=0)
-	 * Ò»ÕÅĞ¡Í¼ data2.image_list!=null&&data2.image_list.size()>0 
-	 * ÈıÕÅÖĞÍ¼ data2.middle_image!=null &&data2.middle_image.url_list!=null &&data2.middle_image.url_list.size()>0
+	 * ä¸€å¼ å°å›¾ data2.image_list!=null&&data2.image_list.size()>0 
+	 * ä¸‰å¼ ä¸­å›¾ data2.middle_image!=null &&data2.middle_image.url_list!=null &&data2.middle_image.url_list.size()>0
 	 */
 	@Override
 	public int getItemViewType(int position) {
-		// ·ÖÀà
-		// 1.È¡³öÊı¾İ
+		// åˆ†ç±»
+		// 1.å–å‡ºæ•°æ®
 		int type=0;
 		Data data2 = data.get(position);
 		
 		
-		// Èç¹ûimage_listÎª¿Õ£¬large , middle Ã»Í¼
+		// å¦‚æœimage_listä¸ºç©ºï¼Œlarge , middle æ²¡å›¾
 		if ((data2.image_list == null || data2.image_list.size() == 0)
 				&& (data2.middle_image == null
 						|| data2.middle_image.url_list == null || data2.middle_image.url_list
 						.size() == 0)
 				&& (data2.large_image_list == null || data2.large_image_list
 						.size() == 0)) {
-			Log.d("Adapter-------------", "ÎŞÍ¼");
+			Log.d("Adapter-------------", "æ— å›¾");
 			type= NO_IMAGE;
 		} else if (data2.image_list != null && data2.image_list.size() > 0) {
 			type= MIDDLE_IMAGE;
-			Log.d("Adapter-------------", "ÈıÕÅ");
+			Log.d("Adapter-------------", "ä¸‰å¼ ");
 		} else if (data2.middle_image != null
 				&& data2.middle_image.url_list != null
 				&& data2.middle_image.url_list.size() > 0) {
-			Log.d("Adapter-------------", "Ğ¡Í¼");
+			Log.d("Adapter-------------", "å°å›¾");
 			type= LITTLE_IMAGE;
 		} else if (data2.large_image_list != null
 				&& data2.large_image_list.size() > 0) {
-			Log.d("Adapter-------------", "´óÍ¼");
+			Log.d("Adapter-------------", "å¤§å›¾");
 			type= LARGE_IMAGE;
 		}
 		if (data2.large_image_list!=null && data2.large_image_list.size()>0) {
-			Log.d("Adapter-------Êı¾İ", "large_image_list"+data2.large_image_list);
+			Log.d("Adapter-------æ•°æ®", "large_image_list"+data2.large_image_list);
 			type=3;
 		}
 		return type;
@@ -175,11 +175,11 @@ public class MyAdapter extends BaseAdapter {
 	
 	
 
-	// Àà±ğÊıÁ¿
+	// ç±»åˆ«æ•°é‡
 	@Override
 	public int getViewTypeCount() {
 		// TODO Auto-generated method stub
 		return 4;
 	}
-
+	//ä»Gitç›´æ¥ä¿®æ”¹çš„æ•°æ®
 }
